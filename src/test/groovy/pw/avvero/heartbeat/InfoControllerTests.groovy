@@ -1,4 +1,4 @@
-package pw.avvero.heartbeats
+package pw.avvero.heartbeat
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc

@@ -1,4 +1,4 @@
-package pw.avvero.heartbeats;
+package pw.avvero.heartbeat;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
