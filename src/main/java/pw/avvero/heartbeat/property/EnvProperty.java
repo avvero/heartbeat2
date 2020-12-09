@@ -1,4 +1,4 @@
-package pw.avvero.heartbeat;
+package pw.avvero.heartbeat.property;
 
 import lombok.Data;
 
