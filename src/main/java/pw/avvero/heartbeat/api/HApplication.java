@@ -8,8 +8,10 @@ import java.util.List;
 @Data
 public class HApplication {
 
-    private String name;
-    private List<HComponent> components;
-    private LocalDateTime lastUpdated;
+    public String name;
+    public String version;
+    public String instanceId;
+    public List<HComponent> components;
+    public LocalDateTime lastUpdated;
 
 }

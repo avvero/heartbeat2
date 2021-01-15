@@ -12,8 +12,8 @@ import spock.lang.Specification
 @ActiveProfiles(profiles = "test")
 @AutoConfigureMockMvc
 @TestPropertySource(properties = [
-        "app.heartbeat.env[ci].service[service1].info=http://172.0.0.1:1001/info",
-        "app.heartbeat.env[ci].service[service2].info=http://172.0.0.2:1002/info",
+        "app.heartbeat.env[ci].service[service1].info=http://service1/info",
+        "app.heartbeat.env[ci].service[service2].info=http://service2/info",
         "app.heartbeat.env[ci].service[service2].name=service2"
 ])
 class ConfigurationTests extends Specification {
@@ -21,10 +21,10 @@ class ConfigurationTests extends Specification {
     @Autowired
     HeartBeatProperty heartBeatProperty
 
-    def "Configuration is read"() {
+    def "Configuration properties are accessable"() {
         expect:
-        heartBeatProperty.env["ci"].service["service1"].info == "http://172.0.0.1:1001/info"
-        heartBeatProperty.env["ci"].service["service2"].info == "http://172.0.0.2:1002/info"
+        heartBeatProperty.env["ci"].service["service1"].info == "http://service1/info"
+        heartBeatProperty.env["ci"].service["service2"].info == "http://service2/info"
         heartBeatProperty.env["ci"].service["service2"].name == "service2"
     }
 

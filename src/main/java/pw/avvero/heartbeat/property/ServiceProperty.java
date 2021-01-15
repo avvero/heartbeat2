@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ServiceProperty {
 
-    private String info;
-    private String name;
+    public String info;
+    public String name;
 
 }

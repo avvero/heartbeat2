@@ -7,6 +7,6 @@ import java.util.Map;
 @Data
 public class EnvProperty {
 
-    private Map<String, ServiceProperty> service;
+    public Map<String, ServiceProperty> service;
 
 }

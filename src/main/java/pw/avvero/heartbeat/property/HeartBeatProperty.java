@@ -11,6 +11,6 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "app.heartbeat")
 public class HeartBeatProperty {
 
-    private Map<String, EnvProperty> env;
+    public Map<String, EnvProperty> env;
 
 }

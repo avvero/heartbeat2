@@ -23,7 +23,8 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.12'
 	annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
-	testCompile("org.apache.commons:commons-text:1.9")
+	testCompile 'org.apache.commons:commons-text:1.9'
+	testCompile 'org.awaitility:awaitility:4.0.2'
 	testCompileOnly 'org.projectlombok:lombok:1.18.12'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
 

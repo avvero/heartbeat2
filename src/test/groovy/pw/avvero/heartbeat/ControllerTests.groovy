@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
+import org.springframework.test.context.TestPropertySource
 import org.springframework.test.web.servlet.MockMvc
 import spock.lang.Specification
 
@@ -14,7 +15,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @ActiveProfiles(profiles = "test")
 @AutoConfigureMockMvc
-class InfoControllerTests extends Specification {
+@TestPropertySource(properties = [
+        "app.heartbeat.enable=false",
+        "app.heartbeat.env[ci].service[service1].info=http://service1/info"
+])
+class ControllerTests extends Specification {
 
     @Autowired
     MockMvc mockMvc

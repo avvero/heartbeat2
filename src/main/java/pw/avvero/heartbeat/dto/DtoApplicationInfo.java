@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class DtoApplicationInfo {
 
-    private String name;
-    private String instanceId;
-    private String version;
+    public String name;
+    public String instanceId;
+    public String version;
 
 }

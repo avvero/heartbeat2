@@ -1,4 +1,4 @@
-package pw.avvero.heartbeat;
+package pw.avvero.heartbeat.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

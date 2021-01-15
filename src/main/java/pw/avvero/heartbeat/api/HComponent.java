@@ -2,14 +2,18 @@ package pw.avvero.heartbeat.api;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
 
 @Data
 public class HComponent {
 
-    private String url;
-    private HApplication app;
-    private LocalDateTime lastUpdated;
-    private String error;
+    public String url;
+
+    public HApplication app;
+    public Date lastUpdated;
+    public String error;
+
+    public List<HCall> calls;
 
 }
